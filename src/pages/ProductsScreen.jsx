@@ -26,7 +26,6 @@ const ProductsContainer = styled.div`
 
 export default function ProductsScreen() { 
   const { data, isLoading} = useGetProductsQuery()
-  console.log(data) 
   return (
     <div>
       <Header />
@@ -34,7 +33,7 @@ export default function ProductsScreen() {
         <h1>Products</h1>
         <ProductsContainer>
           {
-          !isLoading ? data.map((product) => (
+          !isLoading && data ? data.map((product) => (
               <Product
                 key={product.id} 
                 product={product} 
