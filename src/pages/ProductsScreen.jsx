@@ -26,7 +26,6 @@ const ProductsContainer = styled.div`
 
 export default function ProductsScreen() { 
   const { data, isLoading} = useGetProductsQuery()
-  console.log(data, "data")
   return (
     <div>
       <Header />
