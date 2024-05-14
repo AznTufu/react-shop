@@ -33,7 +33,7 @@ export default function ProductsScreen() {
         <h1>Products</h1>
         <ProductsContainer>
         {
-          !isLoading && data.map((product) => (
+          !isLoading && data && data.map((product) => (
             <Product
               key={product.id} 
               product={product} 
